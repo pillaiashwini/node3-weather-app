@@ -32,7 +32,7 @@ hbs.registerPartials(path.join(__dirname,'../templates/partials'))
 app.get('',(req,res) => {
     res.render('index',{
         title: 'Weather',
-        name: "Andrew"
+        name: "Ashwini"
 
     })
 })
@@ -40,15 +40,15 @@ app.get('',(req,res) => {
 app.get('/about',(req,res) => {
     res.render('about', {
         title:"About me",
-        name: "Andrew"
+        name: "Ashwini"
     })
 })
 
 app.get('/help',(req,res) => {
     res.render('help',{
         title: "Help",
-        name:"Andrew",
-        message:"contact us for any help"
+        name:"Ashwini",
+        message:"Contact for any help"
     })
 })
 
@@ -89,7 +89,7 @@ app.get('/weather', (req,res) => {
 
 app.get('/help/*',(req,res) => {
     res.render('404',{
-        name:'Andrew',
+        name:'Ashwini',
         errorMessage: "Help article not found"
     })
 })
@@ -97,7 +97,7 @@ app.get('/help/*',(req,res) => {
 
 app.get('*', (req,res) => {
     res.render('404',{
-        name:'Andrew',
+        name:'Ashwini',
         errorMessage: "Page not found"
     })
 })
