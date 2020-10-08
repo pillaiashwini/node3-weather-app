@@ -85,23 +85,10 @@ app.get('/weather', (req,res) => {
 })
 
 
-
-app.get('/product',(req, res) => {
-    if(!req.query.search) {
-        return res.send({
-            error:"Search  must be provided"
-        })
-    }
-    console.log(req.query.search)
-    res.send({
-        product:[]
-    })
-})
-
 // error page message
 
 app.get('/help/*',(req,res) => {
-    res.render('error-404',{
+    res.render('404',{
         name:'Andrew',
         errorMessage: "Help article not found"
     })
@@ -109,7 +96,7 @@ app.get('/help/*',(req,res) => {
 // error page message
 
 app.get('*', (req,res) => {
-    res.render('error-404',{
+    res.render('404',{
         name:'Andrew',
         errorMessage: "Page not found"
     })
